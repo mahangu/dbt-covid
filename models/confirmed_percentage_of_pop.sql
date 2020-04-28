@@ -8,7 +8,7 @@ select
 	confirmed_count_by_country_yesterday.country_name as country_name,
 	confirmed_count_by_country_yesterday.confirmed_count as confirmed_count,
 	midyearpop.midyear_population as population,
-	round((nullif( confirmed_count_by_country_yesterday.confirmed_count,0 ) / midyearpop.midyear_population)*100,3) as confirmed_percentage_of_pop,
+	confirmed_count_by_country_yesterday.confirmed_count / midyearpop.midyear_population as confirmed_percentage_of_pop,
   
 from confirmed_count_by_country_yesterday
 
