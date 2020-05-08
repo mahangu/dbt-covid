@@ -12,3 +12,18 @@ models:
       - name: date
         tests:
           - not_null
+  - name: confirmed_percentage_of_pop
+    columns:
+      - name: country_name
+        tests:
+          - unique
+          - not_null
+      - name: confirmed_count
+        tests:
+          - not_null
+      - name: population
+        tests:
+          - not_null
+      - name: confirmed_percentage_of_pop
+        tests:
+          - not_null
